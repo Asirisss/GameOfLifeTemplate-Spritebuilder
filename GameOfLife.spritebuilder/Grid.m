@@ -12,7 +12,7 @@
 //these are variables that cannot be changed
 
 static const int GRID_ROWS = 8;
-static const int GRID_COLUMS = 10;
+static const int GRID_COLUMNS = 10;
 
 @implementation Grid {
     NSMutableArray *_gridArray;
@@ -31,7 +31,7 @@ static const int GRID_COLUMS = 10;
 
 -(void)setupGrid {
     //divide that grid's size by the number of collums/rows to figure the right width and height of each cell
-    _cellWidth = self.contentSize.width / GRID_COLUMS;
+    _cellWidth = self.contentSize.width / GRID_COLUMNS;
     _cellHeight = self.contentSize.height / GRID_ROWS;
     
     float x =0;
@@ -46,7 +46,7 @@ static const int GRID_COLUMS = 10;
         _gridArray[i] = [NSMutableArray array];
         x = 0;
         
-        for (int j = 0; j < GRID_COLUMS; j++) {
+        for (int j = 0; j < GRID_COLUMNS; j++) {
             Creature *creature = [[Creature alloc]initCreature];
             creature.anchorPoint = ccp(x,y);
             [self addChild:creature];
