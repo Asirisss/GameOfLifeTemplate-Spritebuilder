@@ -54,8 +54,8 @@ static const int GRID_COLUMS = 10;
             //this is shorthand to access an array inside an array
             _gridArray[i][j] = creature;
             
-            // make creatures visible to test this method, remove this once we know we have filled the grid properly
-            creature.isAlive = YES;
+            /* make creatures visible to test this method, remove this once we know we have filled the grid properly
+            creature.isAlive = YES;*/
             
             x+=_cellWidth;
 
@@ -83,6 +83,7 @@ static const int GRID_COLUMS = 10;
     int row = touchPosition.y/_cellHeight;
     int column = touchPosition.x/_cellWidth;
     return _gridArray[row][column];
+    
     
 }
 
